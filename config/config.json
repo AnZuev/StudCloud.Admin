@@ -1,0 +1,22 @@
+{
+    "port": 3000,
+    "mongoose":{
+        "mainDB": "mongodb://localhost/test_IStudentAPI",
+        "adminDB": "mongodb://localhost/test_admin"
+    },
+    "session":{
+        "secret": "sdjknfskdjnvdfklnvdfjnvldjkfnv",
+        "key": "sid",
+        "cookie":{
+            "path": "/",
+            "maxAge":3600000,
+            "httpOnly": true
+        }
+    },
+
+    "general":{
+        "version": "0.1a",
+        "host": "http://localhost:10000",
+        "port": 10000
+    }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Новые пользователи",
+    "updateUrl": "/widgets/usersTab?widget=newUsers"
+  },
+  {
+    "title": "Соотношение активированные/новые",
+    "updateUrl": "/widgets/usersTab?widget=activated"
+  },
+  {
+    "title": "Статистика по университетам за неделю",
+    "updateUrl": "/widgets/usersTab?widget=usersPerUniversitiesPerWeek"
+  }
+]

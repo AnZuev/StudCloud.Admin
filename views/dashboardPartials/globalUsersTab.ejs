@@ -1,0 +1,67 @@
+<div class="col-lg-9 tabContent" id='usersTab'>
+
+	<h3 >Пользователи</h3>
+	<div class="row childTab" data-value="navigation">
+		<ul class="nav nav-tabs" >
+			<li class="active" data-value="overview" style="cursor: pointer"><a href="#" >Общая информация</a></li>
+			<li class='pull-right' data-value="searchForm" style="cursor: pointer"><a href="#">Поиск</a></li>
+			<li class='pull-right ' data-value="searchResults" style="cursor: pointer"><a href="#">Результат</a></li>
+		</ul>
+	</div>
+
+	<div class="row childTab" data-value="searchForm" style="display: none">
+		<div class="col-lg-6" >
+			<br>
+			<form role="form">
+				<div class="form-group">
+					<label for="usersSearchUniversity">Университет</label>
+					<input type="text" class="form-control" id="usersSearchUniversity" placeholder="Университет" data-items="4" autocomplete='off'>
+				</div>
+				<div class="form-group">
+					<label for="usersSearchFaculty">Факультет</label>
+					<input type="text" class="form-control" id="usersSearchFaculty" placeholder="Факультет" autocomplete='off'>
+				</div>
+				<div class="form-group">
+					<label for="usersSearchYear">Курс</label>
+					<input type="text" class="form-control" id="usersSearchYear" placeholder="Курс" autocomplete='off'>
+				</div>
+				<div class="checkbox" >
+					<label><input type="checkbox" id='usersSearchTabActivatedCheckbox'> Аккаунт активирован</label>
+				</div>
+				<div class="checkbox">
+					<label><input type="checkbox" id='usersSearchTabNotActivatedCheckbox'> Аккаунт не активирован</label>
+				</div>
+				<div class="btn btn-success pull-right ">Поиск</div>
+			</form>
+		</div>
+		<div class="col-lg-6">
+			<br>
+			<div class="alert alert-info">
+				<strong>Обратите внимание!</strong><br>
+				Информация, полученная о пользователе на данной странице, не подлежит разглашению. Давайте уважать пользователей нашей системы
+			</div>
+		</div>
+	</div>
+	<div class="row childTab" data-value="searchResults" style="display: none" >
+		<br>
+		<table class="table table-striped table-hover" >
+			<thead>
+				<tr>
+					<th>#</th>
+					<th>Имя</th>
+					<th>Фамилия</th>
+					<th>Почта</th>
+					<th>Университет</th>
+					<th>Факультет</th>
+					<th>Курс</th>
+					<th>Группа</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+	</div>
+	<div class="row childTab" data-value="overview">
+
+	</div>
+</div>
