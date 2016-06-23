@@ -46,6 +46,7 @@ university.statics.getUniversityName = function(id, callback){
 	this.findById(id, {shortTitle:1}, function(err, res){
 		if(err) return callback(err);
 		else{
+			if(!res)return callback(null, "Супер универ");
 			return callback(null, res.shortTitle);
 		}
 	})

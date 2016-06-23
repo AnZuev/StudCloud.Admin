@@ -37,7 +37,7 @@ module.exports = function(callback){
 								counter: util.format('%s / %s ', results[1], allUsers[1].counter)
 							},
 							{
-								title: "Зв месяц",
+								title: "За месяц",
 								counter: util.format('%s / %s ', results[2], allUsers[2].counter)
 							},
 							{

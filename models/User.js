@@ -1,6 +1,6 @@
 var crypto  = require('crypto');
 var connection = require('../libs/mainDBMongoose'),
-	mongoose = require('mongoose')
+	mongoose = require('mongoose');
     Schema = mongoose.Schema;
 var util = require('util');
 
@@ -162,7 +162,16 @@ User.statics.getUserById = function(userId, callback){
 };
 
 User.statics.getNewUsers = function(age, callback){
-	this.count({created:{$gt: age} }, function(err, counter){
+	this.count({created:{$gte: age.toISOString()} }, function(err, counter){
+		if(err){
+			return callback(null, -1);
+		}else{
+			return callback(null, counter);
+		}
+	})
+};
+User.statics.countUsers = function(callback){
+	this.find({}, function(err, counter){
 		if(err){
 			console.error(err);
 			return callback(null, -1);
@@ -170,7 +179,7 @@ User.statics.getNewUsers = function(age, callback){
 			return callback(null, counter);
 		}
 	})
-};
+}
 
 User.statics.getActivatedUsers = function(age, callback){
 	this.count({created:{$gt: age} , "activation.activated": true}, function(err, counter){
@@ -181,7 +190,7 @@ User.statics.getActivatedUsers = function(age, callback){
 			return callback(null, counter);
 		}
 	})
-}
+};
 
 User.statics.getStaticsByUniversity = function(callback){
 	this.aggregate([

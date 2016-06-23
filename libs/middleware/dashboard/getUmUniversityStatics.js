@@ -21,8 +21,11 @@ module.exports = function(callback){
 							statics[index].title = result[index];
 						})
 					}
+					console.log(statics);
 					return callback(null, statics);
 				});
+			}else{
+				return callback(null, null);
 			}
 
 

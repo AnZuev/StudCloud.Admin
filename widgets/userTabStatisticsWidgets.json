@@ -10,5 +10,9 @@
   {
     "title": "Статистика по университетам за неделю",
     "updateUrl": "/widgets/usersTab?widget=usersPerUniversitiesPerWeek"
+  },
+  {
+    "title": "Статистика по университетам за неделю",
+    "updateUrl": "/widgets/usersTab?widget=newUsers"
   }
 ]

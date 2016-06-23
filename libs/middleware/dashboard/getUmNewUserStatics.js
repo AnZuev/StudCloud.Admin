@@ -13,7 +13,7 @@ module.exports = function(callback){
 	var thisMonth = new Date(now.getFullYear(), now.getMonth() - 1, now.getDate());
 	tasks.push(createTaskToGetNewUsersStatics(thisMonth));
 
-	var all = new Date(2015);
+	var all = new Date(1970, 0);
 	tasks.push(createTaskToGetNewUsersStatics(all));
 
 
@@ -30,7 +30,7 @@ module.exports = function(callback){
 					counter: results[1]
 				},
 				{
-					title: "Зв месяц",
+					title: "За месяц",
 					counter: results[2]
 				},
 				{

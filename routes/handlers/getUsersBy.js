@@ -31,7 +31,23 @@ exports.get = function(req, res, next){
 			if(err){
 				next(err);
 			}else{
-				res.json(users);
+				var globalResult = [];
+				users.forEach(function(user){
+					var results = [];
+					results.push(user.name);
+					results.push(user.surname);
+					results.push(user.mail);
+					results.push(user.university);
+					results.push(user.faculty);
+					results.push(user.year);
+					results.push(user.group);
+					var result = {
+						id: user._id,
+						body: results
+					};
+					globalResult.push(result);
+				});
+				res.json(globalResult);
 				res.end();
 			}
 		})

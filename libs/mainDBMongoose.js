@@ -6,8 +6,5 @@ var mongoose = require('mongoose');
 var config = require('../config');
 
 
-
-
-
 module.exports = mongoose.createConnection(config.get('mongoose:mainDB'), config.get('mongoose:options'));
 
